@@ -22,10 +22,10 @@ class DevelopmentData extends Seeder
         while($data=fgetcsv($csfFile,1000,",")!== FALSE){
             if(!firstline){
                 articlecategory::create([
-                 "ab_name" = $data['1'];   
-                 "ab_description" = $data['2']:
-                 "ab_parent" = $data['3'];
-                ])
+                 "ab_name" => $data['1'],  
+                 "ab_description" => $data['2'],
+                 "ab_parent" => $data['3']
+                ]);
             }
         }
 

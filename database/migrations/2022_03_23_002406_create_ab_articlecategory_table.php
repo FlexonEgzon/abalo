@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('ab_parent')->nullable();
             $table->foreign('ab_parent')->references('id')->on('ab_articlecategory')->nullable();
         }); 
-    
+    }
 
     /**
      * Reverse the migrations.
