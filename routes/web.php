@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AbTestDataController;
-
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,6 @@ use App\Http\Controllers\AbTestDataController;
 
 Route::get('/', function () { return view('welcome'); });
 Route::get('/testdata', [AbTestDataController::class,'index']);
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/isloggedin', [AuthController::class, 'isloggedin'])->name('haslogin');
