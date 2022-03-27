@@ -9,7 +9,7 @@ class AbTestData extends Model
 {
     protected $table = 'ab_testdata';
     protected $primarykey = 'id';
-
+    	
 
     use HasFactory;
 }
